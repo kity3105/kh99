@@ -3,5 +3,10 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/kh99/', // 这里一定要写你的仓库名，前后都要有斜杠
+  base: '/kh99/',
+  resolve: {
+    alias: {
+      '@': '/src' // 将 @ 直接映射到项目的 /src 目录
+    }
+  }
 })
