@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import Instructions from './pages/Instructions'
@@ -10,7 +10,7 @@ import Fanworks from './pages/Fanworks'
 import Profiles from './pages/Profiles'
 import Messages from './pages/Messages'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -23,7 +23,9 @@ const router = createBrowserRouter([
       { path: "/messages", element: <Messages /> },
     ]
   }
-])
+], {
+  basename: "/kh99"
+})
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
