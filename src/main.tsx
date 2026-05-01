@@ -23,9 +23,7 @@ const router = createHashRouter([
       { path: "/messages", element: <Messages /> },
     ]
   }
-], {
-  basename: "/kh99"
-})
+])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
